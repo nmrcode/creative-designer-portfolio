@@ -1,0 +1,32 @@
+.title {
+   font-family: Eczar, sans-serif;
+   font-weight: 600;
+
+   // .title--h1
+   &--h1 {
+      font-size: rem(64);
+      line-height: calc((80 / 64) * 100%);
+      letter-spacing: rem(.02);
+      @include pc_768 {
+         font-size: rem(32);
+      }
+   }
+
+   // .title--h2
+   &--h2 {
+      font-size: rem(40);
+      line-height: calc((50 / 48) * 100%);
+      @include pc_768 {
+         font-size: rem(24);
+      }
+
+   }
+
+   // .title--h3
+   &--h3 {
+      font-size: rem(32);
+      @include pc_768 {
+         font-size: rem(20);
+      }
+   }
+}

@@ -1,0 +1,30 @@
+// Стили для бургера
+// burger-btn($width: 30px, $height: 30px, $line-height: 2px, $color: #000, $color-active: currentColor, $z: 10)
+.burger {
+   @include burger-btn();
+   @include mb_768 {
+      display: none;
+   }
+}
+
+.header {
+   position: fixed;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   width: 100%;
+
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: rem(94);
+      @include pc_768 {
+         justify-content: flex-end;
+      }
+   }
+
+   &__nav {
+   }
+}
+

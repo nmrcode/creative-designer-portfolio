@@ -1,0 +1,70 @@
+.hero {
+   background-color: $color-accent;
+
+   &__wrapper {
+      display: grid;
+      grid-template-columns: rem(620) 1fr;
+      align-items: flex-end;
+      gap: rem(50);
+      padding-top: rem(108);
+      @include pc_992 {
+         grid-template-columns: 1fr;
+         gap: rem(10)
+      }
+   }
+
+   &__left {
+      @include ad-value(padding-bottom, 104, 0, 1);
+   }
+
+   &__welcome {
+      display: inline-block;
+      font-size: rem(24);
+      line-height: calc((36 / 24) * 100%);
+      background-color: $color-accent-dark;
+      padding: em(12, 24) em(24, 24);
+      border-radius: em(10, 24);
+      margin-bottom: rem(24);
+      @include pc_768 {
+         display: block;
+         text-align: center;
+      }
+   }
+
+   &__title {
+      margin-bottom: rem(40);
+   }
+
+   &__btns {
+      display: flex;
+      align-items: center;
+      @include pc_768 {
+         flex-direction: column;
+         align-items: stretch;
+      }
+   }
+
+   &__btn {
+      flex: 1 1 50%;
+
+      @include mb_768 {
+         &:not(:last-child) {
+            margin-right: rem(16);
+         }
+      }
+
+      @include pc_768 {
+         margin-bottom: rem(16);
+      }
+
+   }
+
+   &__right {
+      @include pc_992 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+}
+
