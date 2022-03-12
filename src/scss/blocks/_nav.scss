@@ -35,11 +35,29 @@
    }
 
    &__link {
+      position: relative;
       font-size: rem(20);
       line-height: calc((30 / 20) * 100%);
       color: $color-secondary;
       @include pc_768 {
          font-size: rem(32);
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: rem(-5);
+         left: 0;
+         width: 0;
+         height: rem(2);
+         background-color: currentColor;
+         transition: width .2s ease-in-out;
+      }
+
+      @include pc_hover {
+         &::before {
+            width: 100%;
+         }
       }
    }
 }

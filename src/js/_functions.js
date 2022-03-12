@@ -8,3 +8,6 @@ import "./functions/burger";
 
 //Проверка разрешения экрана (см.доку внутри модуля)
 // import { * } from "./functions/viewportCheck";
+
+//Заливка шапки при скролле
+import "./functions/headerScroll";

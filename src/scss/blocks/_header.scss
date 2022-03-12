@@ -14,11 +14,20 @@
    left: 0;
    width: 100%;
 
+   &._scrolled {
+      background-color: $color-accent;
+
+      .header__wrapper {
+         min-height: rem(60);
+      }
+   }
+
    &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
       min-height: rem(94);
+      transition: min-height .2s ease-in-out;
       @include pc_768 {
          justify-content: flex-end;
       }
